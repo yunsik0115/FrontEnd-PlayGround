@@ -9,61 +9,58 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="top-header">
+  <header class="top-header top-header--transparent">
     <div class="header__top">
-
-      <div class="header column">
+      <div class="header__column">
         <i class="fas fa-fighter-jet"></i>
-        <i class="fas fa-battery-full"></i>
+        <i class="fas fa-wifi"></i>
       </div>
-
-      <div class="header column">
-        <span class="header__time">
-          18:38
-        </span>
+      <div class="header__column">
+        <span class="header__time">18:38</span>
       </div>
-
-
-      <div class="header column">
-        <!-- the moon icon--> <i class="far fa-moon"></i>
-        <!-- blue icon--> <i class="fab fa-bluetooth-b"></i>
-        <span class="header__battery">66% <!--battery icon--></span>
+      <div class="header__column">
+        <i class="far fa-moon"></i>
+        <i class="fab fa-bluetooth-b"></i>
+        <span class="header__battery">66% <i class="fas fa-battery-full"></i></span>
       </div>
-
-
-      <div class="header column">
-        <a href="index.html">
-        <i class="fa fa-times fa-lg"></i>
-      </a>
     </div>
-
     <div class="header__bottom">
+      <div class="header__column">
+        <a href="index.html">
+          <i class="fa fa-times fa-lg"></i>
+        </a>
+      </div>
+      <div class="header__column">
+
+      </div>
       <div class="header__column">
         <i class="fa fa-user fa-lg"></i>
       </div>
-
-
     </div>
   </header>
 <main class="profile">
   <header class="profile__header">
+    <div class="profile__header-container">
     <img src="images/avatar.jpg" alt="">
     <h3 class="profile__header-title">Nicolas</h3>
+  </div>
   </header>
-  <input type="text" placeholder="itnicolasme@gmail.com">
+  <div class="div profile__container">
+      <input type="text" placeholder="itnicolasme@gmail.com">
   <div class="profile__actions">
     <div class="profile__action">
       <span class="profile__action-circle">
-        <i class="fas fa-comment fa-2x"></i>
+        <i class="fas fa-comment fa-lg"></i>
       </span>
       <span class="profile__action-title">My Chatroom</span>
     </div>
     <div class="profile__action">
       <span class="profile__action-circle">
-        <i class="fas fa-pencil-alt fa-2x"></i>
+        <i class="fas fa-pencil-alt fa-lg"></i>
       </span>
       <span class="profile__action-title">Edit profile</span>
     </div>
+  </div>
   </div>
 </main>
 </body>
