@@ -13,7 +13,7 @@
   border-bottom: 1px solid #ebebeb;
 }
 
-.chats__list .chats__chat: last-child {
+.chats__list .chats__chat:last-child {
   border: none;
 }
 
@@ -59,4 +59,10 @@
   font-size: 25px;
   color: #523737;
   box-shadow: 1px 0 10px rgba(0,0,0,0.5);
+  transition : all .3s ease-in-out;
+}
+
+.chat-btn:hover {
+  color:white;
+  background:#523737;
 }

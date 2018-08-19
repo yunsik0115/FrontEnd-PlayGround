@@ -12,13 +12,16 @@
   background-color: #f1f2f3;
   font-size: 13px;
   text-align: center;
+  transition: border-color .3s linear;
 }
+
 .searchbar input:placeholder{
   text-align: cetner;
 }
 
 .searchbar input:focus{
   outline: none;
+  border: 1px soild #ffe94a;
 }
 .searchbar i{
   position : absolute;
