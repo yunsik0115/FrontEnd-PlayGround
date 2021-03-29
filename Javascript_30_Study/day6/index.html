@@ -19,8 +19,12 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 fetch(endpoint)
-  .then(blob => blob.json())
+  .then(blob => blob.json()) /*blob(뭔 파일인지 모름)-> blob.json json 형식이라는 걸 명시*/
   .then(data => cities.push(...data));
+  /*spread in to function...? --> WTF? */
+  /*let 으로 cities 설정하고 cities = data로 설정가능 */
+  /*const로 설정할 경우 .push로 해야하는데 array의 array로 설정됨*/
+  /*그래서 ... 이 spreading을 해준다는데 어떻게....?*/
 
 function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
@@ -35,6 +39,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   /*https://www.inflearn.com/course/%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D#*/
 }
+/*숫자에 commas 할당해주는 regex 함수*/
 
 function displayMatches() {
   const matchArray = findMatches(this.value, cities);
@@ -49,6 +54,7 @@ function displayMatches() {
       </li>
     `;
   }).join('');
+  /*join, as a 1 string not array (하나의 string으로 반환함 array로 반환 안함)*/
   suggestions.innerHTML = html;
 }
 
@@ -57,6 +63,7 @@ const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
+/*어떤 키를 누르거나 변화할 경우 displaymatches 함수 실행*/
 
 </script>
   </body>
